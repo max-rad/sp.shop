@@ -1,0 +1,48 @@
+.counter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 84px;
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border: none;
+		background-color: transparent;
+
+		cursor: pointer;
+
+		svg {
+			@extend .transition-active;
+			width: 20px;
+			height: 20px;
+
+			color: $color-default-black;
+		}
+
+		&:hover {
+			svg {
+				color: rgba($color-default-black, 0.8);
+			}
+		}
+
+		&:active {
+			svg {
+				color: rgba($color-default-black, 0.8);
+			}
+		}
+	}
+
+	&__number {
+		display: block;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+
+		color: $color-default-black;
+	}
+}

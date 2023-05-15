@@ -1,0 +1,79 @@
+.card {
+	display: flex;
+	align-items: flex-start;
+
+	&__image-wrapper {
+		width: 100px;
+		height: 100px;
+		margin-right: 12px;
+
+		img {
+			width: 100px;
+			height: 100px;
+
+			object-fit: cover;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		min-height: 32px;
+		margin-bottom: 15px;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+
+		color: $color-default-black;
+	}
+
+	&__additional-info {
+		display: flex;
+		align-items: center;
+	}
+
+	&__price {
+		margin-left: 25px;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+
+		color: $color-default-black;
+	}
+
+	&__delete {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		margin-left: auto;
+
+		border: none;
+		background-color: transparent;
+
+		cursor: pointer;
+
+		svg {
+			@extend .transition-active;
+
+			color: $color-very-light-grey;
+		}
+
+		&:hover {
+			svg {
+				color: $color-default-black;
+			}
+		}
+
+		&:active {
+			svg {
+				color: $color-default-black;
+			}
+		}
+	}
+}

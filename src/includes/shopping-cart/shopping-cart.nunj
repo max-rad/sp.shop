@@ -1,0 +1,22 @@
+{% from '../../components/progress-bar/progress-bar.nunj' import progressBar %}
+{% from '../../components/billing-information/billing-information.nunj' import billingInformation %}
+{% from '../../components/basket/basket.nunj' import basket %}
+{% from '../../components/promo-code/promo-code.nunj' import promoCode %}
+{% from '../../components/total-price/total-price.nunj' import totalPrice %}
+
+<section class="shopping-cart">
+	<div class="container">
+		<h1 class="invisible-container">Shopping cart</h1>
+		<div class="shopping-cart__wrapper">
+			<div class="shopping-cart__content">
+				{{ progressBar() }}
+				{{ billingInformation() }}
+			</div>
+			<div class="shopping-cart__aside">
+				{{ basket() }}
+				{{ promoCode() }}
+				{{ totalPrice() }}
+			</div>
+		</div>
+	</div>
+</section>

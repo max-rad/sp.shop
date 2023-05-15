@@ -1,0 +1,28 @@
+.basket {
+	padding: 40px 40px 39px;
+
+	border-bottom: 1px solid $color-very-light-grey;
+
+	&__title {
+		margin-bottom: 30px;
+
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 21px;
+
+		color: $color-default-black;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

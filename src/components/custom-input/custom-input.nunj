@@ -1,0 +1,18 @@
+{% from "../../components/tooltip/tooltip.nunj" import tooltip %}
+
+{% macro customInput(props) %}
+	<div class="custom-input{% if props.className %} {{ props.className }} {% endif %}">
+		<label>
+			{% if props.label %}
+				<span class="custom-input__label">
+					{{ props.label }}
+
+					{% if props.tooltip %}
+						{{ tooltip() }}
+					{% endif %}
+				</span>
+			{% endif %}
+			<input type="{{ props.type }}" name="{{ props.name }}" {% if props.placeholder %} placeholder="{{ props.placeholder }}" {% endif %}>
+		</label>
+	</div>
+{% endmacro %}

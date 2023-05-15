@@ -1,0 +1,23 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% macro customToggle(props) %}
+	<div class="custom-toggle{% if props.type %} custom-toggle_{{ props.type }} {%  endif %} {% if props.className %} {{ props.className }} {% endif %}">
+		<label>
+			<input type="{{ props.type }}" value="{{ props.value }}" name="{{ props.name }}" {% if props.isChecked %} checked {% endif %}>
+			<span class="custom-toggle__icon"></span>
+
+			{% if props.label %}
+				<span class="custom-toggle__label{% if props.labelMod %} custom-toggle__label_{{ props.labelMod }} {% endif %}"> {{ props.label }} </span>
+			{% endif %}
+
+			{% if props.image %}
+				<span class="custom-toggle__label">
+					{{ icon({
+						iconName: props.image.name,
+						attributes: props.image.attributes
+					}) }}
+				</span>
+			{% endif %}
+		</label>
+	</div>
+{% endmacro %}

@@ -9,9 +9,23 @@
 
 // ======= COMPONENTS =======
 @import '../../components/button/button';
+@import '../../components/user-menu/user-menu';
+@import '../../components/menu/menu';
+@import '../../components/progress-bar/progress-bar';
+@import '../../components/billing-information/billing-information';
+@import '../../components/custom-toggle/custom-toggle';
+@import '../../components/custom-input/custom-input';
+@import '../../components/card-information/card-information';
+@import '../../components/tooltip/tooltip';
+@import '../../components/basket/basket';
+@import '../../components/card/card';
+@import '../../components/counter/counter';
+@import '../../components/promo-code/promo-code';
+@import '../../components/total-price/total-price';
 
 // ======= INCLUDES =======
 @import '../../includes/header/header';
+@import '../../includes/shopping-cart/shopping-cart';
 
 // ======= PAGES =======
 @import 'pages/main';

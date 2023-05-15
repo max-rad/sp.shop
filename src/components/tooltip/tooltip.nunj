@@ -1,0 +1,6 @@
+{% macro tooltip() %}
+	<span class="tooltip">
+		<span class="tooltip__button">?</span>
+		<span class="tooltip__text">Tooltip text</span>
+	</span>
+{% endmacro %}

@@ -1,0 +1,104 @@
+.custom-toggle {
+	display: flex;
+	align-items: center;
+
+	label {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		cursor: pointer;
+	}
+
+	input {
+		@include hide-input;
+	}
+
+	&_checkbox {
+		.custom-toggle__label {
+			color: $color-suva-grey;
+
+			a {
+				@extend .transition-active;
+				color: $color-default-black;
+
+				text-decoration: none;
+
+				&:hover {
+					color: rgba($color-default-black, 0.8);
+				}
+
+				&:active {
+					color: rgba($color-default-black, 0.8);
+				}
+			}
+		}
+	}
+
+	&_radio {
+		.custom-toggle__icon {
+			border-radius: 50%;
+
+			&::before {
+				border-radius: 50%;
+			}
+		}
+
+		.custom-toggle__label {
+			color: $color-default-black;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		display: block;
+
+		top: 0;
+		left: 0;
+
+		width: 18px;
+		height: 18px;
+
+		border: 1px solid $color-very-light-grey;
+
+		&::before {
+			content: '';
+			position: absolute;
+
+			top: 50%;
+			left: 50%;
+
+			width: 8px;
+			height: 8px;
+
+			background-color: $color-royal-blue;
+
+			transition: opacity $default-transition-duration $default-transition-function,
+				visibility $default-transition-duration $default-transition-function;
+			transform: translate(-50%, -50%);
+
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+	input:checked + .custom-toggle__icon::before {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__label {
+		display: block;
+
+		min-height: 18px;
+		padding-left: 27px;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+
+		svg {
+			display: flex;
+		}
+	}
+}

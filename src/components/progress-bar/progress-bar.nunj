@@ -1,0 +1,13 @@
+{% macro progressBar() %}
+	<div class="progress-bar">
+		<div class="progress-bar__line"></div>
+		<ul class="progress-bar__list">
+			{% for item in progressBarItems %}
+				<li class="progress-bar__item">
+					<span class="progress-bar__number{% if item.isChecked %} is-checked {% endif %} {% if item.isActive %} is-active {% endif %}"> {{ item.number }} </span>
+					<span class="progress-bar__text"> {{ item.text }} </span>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endmacro %}

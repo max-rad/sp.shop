@@ -1,0 +1,17 @@
+{% from '../../components/custom-input/custom-input.nunj' import customInput %}
+
+{% macro cardInformation() %}
+	 <div class="card-information">
+		 {{ customInput({label: 'Name on card', type: 'text', name: 'card-name', placeholder: 'Placeholder Text'}) }}
+		 <div class="card-information__card-number">
+			 {{ customInput({label: 'Card number', type: 'number', name: 'card-number-1'}) }}
+			 {{ customInput({type: 'number', name: 'card-number-2'}) }}
+			 {{ customInput({type: 'number', name: 'card-number-3'}) }}
+			 {{ customInput({type: 'number', name: 'card-number-4'}) }}
+		 </div>
+		 <div class="card-information__additional-info">
+			 {{ customInput({label: 'Expire date', type: 'text', name: 'expire-date'}) }}
+			 {{ customInput({label: 'CVV code', tooltip: true, type: 'number', name: 'cvv-code'}) }}
+		 </div>
+	 </div>
+{% endmacro %}

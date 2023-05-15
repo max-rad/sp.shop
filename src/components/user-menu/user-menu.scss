@@ -1,0 +1,83 @@
+.user-menu {
+	margin-left: 26px;
+
+	@include max-screen(1023px) {
+		margin-left: 0;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		margin-right: 26px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			@extend .transition-active;
+			color: #000;
+		}
+
+		&_search {
+			svg {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&_cart {
+			position: relative;
+			justify-content: flex-start;
+
+			width: 30px;
+			height: 27px;
+
+			svg {
+				width: 24px;
+				height: 21px;
+			}
+		}
+
+		&:hover {
+			svg {
+				color: rgba($color-default-black, 0.8);
+			}
+		}
+
+		&:active {
+			svg {
+				color: rgba($color-default-black, 0.8);
+			}
+		}
+	}
+
+	&__number {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		top: -4px;
+		right: 0;
+
+		width: 14px;
+		height: 14px;
+
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 12px;
+
+		border-radius: 50%;
+		background-color: $color-royal-blue;
+		color: $color-default-white;
+	}
+}

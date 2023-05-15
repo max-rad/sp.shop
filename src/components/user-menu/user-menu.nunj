@@ -1,0 +1,21 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% macro userMenu() %}
+	<div class="user-menu">
+		<ul class="user-menu__list">
+			{% for item in userMenuItems %}
+				<li class="user-menu__item">
+					<a href="{{ item.path }}" class="user-menu__link{% if item.mod %} user-menu__link_{{ item.mod }} {% endif %}" aria-label={{ item.label }}>
+						{% if item.mod == "cart" %}
+							<span class="user-menu__number" data-cart-quantity>2</span>
+						{% endif %}
+						{{ icon({
+							iconName: item.icon.name,
+							attributes: item.icon.attributes
+						}) }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endmacro %}

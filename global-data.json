@@ -1,4 +1,24 @@
 {
+	"userMenuItems": [
+		{
+			"path": "#",
+			"mod": "search",
+			"label": "search",
+			"icon": {
+				"name": "search",
+				"attributes": "width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\""
+			}
+		},
+		{
+			"path": "#",
+			"mod": "cart",
+			"label": "cart",
+			"icon": {
+				"name": "cart",
+				"attributes": "width=\"24\" height=\"21\" viewBox=\"0 0 24 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\""
+			}
+		}
+	],
 	"menuItems": [
 		{
 			"name": "Menu Item 1",
@@ -21,6 +41,66 @@
 		{
 			"title": "Item 2",
 			"text": "Desc 2"
+		}
+	],
+	"progressBarItems": [
+		{
+			"number": "1",
+			"text": "Account",
+			"isChecked": true
+		},
+		{
+			"number": "2",
+			"text": "Shipping",
+			"isChecked": true
+		},
+		{
+			"number": "3",
+			"text": "Billing",
+			"isActive": true
+		},
+		{
+			"number": "4",
+			"text": "Review"
+		}
+	],
+	"basketItems": [
+		{
+			"image": {
+				"src": "jacket.jpg",
+				"width": "100",
+				"height": "100",
+				"alt": "white and yellow jacket"
+			},
+			"title": "Amet minim mollit non deserunt ullamco est sit",
+			"price": "525"
+		},
+		{
+			"image": {
+				"src": "sneakers.jpg",
+				"width": "100",
+				"height": "100",
+				"alt": "blue and orange sneakers"
+			},
+			"title": "Amet minim mollit non",
+			"price": "525"
+		}
+	],
+	"totalPriceItems": [
+		{
+			"text": "Subtotal",
+			"price": "1&nbsp;050",
+			"dataset": "subtotal"
+		},
+		{
+			"text": "Tax",
+			"price": "100",
+			"dataset": "tax"
+		},
+		{
+			"text": "Shipping",
+			"price": "150",
+			"dataset": "shipping"
 		}
 	]
 }

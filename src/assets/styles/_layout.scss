@@ -3,7 +3,13 @@
 }
 
 .container {
-	max-width: 980px;
-	margin: auto;
+	max-width: 1640px;
+	margin: 0 auto;
+	padding: 0 30px;
+
 	box-sizing: content-box;
+
+	@include max-screen(767px) {
+		padding: 0 10px;
+	}
 }

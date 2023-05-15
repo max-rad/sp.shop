@@ -1,0 +1,16 @@
+{% macro totalPrice() %}
+	<div class="total-price">
+		<ul class="total-price__list">
+			{% for item in totalPriceItems %}
+				<li class="total-price__item">
+					<span class="total-price__text">{{ item.text }}</span>
+					<span class="total-price__text" {% if item.dataset %} data-price-{{ item.dataset }} {% endif %}>${{ item.price }}</span>
+				</li>
+			{% endfor %}
+		</ul>
+		<div class="total-price__total">
+			<span class="total-price__text total-price__text_bold">Total</span>
+			<span class="total-price__text total-price__text_bold" data-price-total>$1 300</span>
+		</div>
+	</div>
+{% endmacro %}

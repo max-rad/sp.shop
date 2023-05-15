@@ -1,0 +1,15 @@
+{% from '../../components/custom-input/custom-input.nunj' import customInput %}
+{% from '../../components/button/button.nunj' import button %}
+
+{% macro promoCode() %}
+	<div class="promo-code">
+		<h2 class="promo-code__title">Promo code</h2>
+
+		<form method="get">
+			<div class="promo-code__form-wrapper">
+				{{ customInput({className: 'promo-code__input', type: 'text', name: 'promo-code', placeholder: 'Placeholder Text'}) }}
+				{{ button({children: 'Apply', type: 'submit'}) }}
+			</div>
+		</form>
+	</div>
+{% endmacro %}

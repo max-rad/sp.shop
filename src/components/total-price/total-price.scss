@@ -1,0 +1,33 @@
+.total-price {
+	padding: 40px 55px 0 40px;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__text {
+		display: block;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 34px;
+
+		color: $color-default-black;
+
+		&_bold {
+			font-weight: 700;
+			font-size: 18px;
+		}
+	}
+
+	&__total {
+		display: flex;
+		justify-content: space-between;
+	}
+}

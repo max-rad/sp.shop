@@ -1,0 +1,32 @@
+{% from '../../components/custom-toggle/custom-toggle.nunj' import customToggle %}
+{% from '../../components/card-information/card-information.nunj' import cardInformation %}
+{% from '../../components/button/button.nunj' import button %}
+
+{% macro billingInformation() %}
+	<div class="billing-information">
+		<div class="billing-information__container">
+			<h2 class="billing-information__title">Billing Information</h2>
+		</div>
+		<form method="post">
+			<div class="billing-information__container">
+				<div class="billing-information__radio-block">
+					{{ customToggle({className: 'billing-information__radio', type: 'radio', value: 'credit-card', name: 'payment-type', isChecked: true, label: 'Pay with Credit Card'}) }}
+					{{ customToggle({className: 'billing-information__radio', type: 'radio', value: 'paypal', name: 'payment-type', isChecked: false, image: { name: 'paypal', attributes: 'width="85" height="23" viewBox="0 0 85 23" fill="none" xmlns="http://www.w3.org/2000/svg"' } }) }}
+				</div>
+			</div>
+
+			{{ cardInformation() }}
+
+			<div class="billing-information__container">
+				<div class="billing-information__checkbox-block">
+					{{ customToggle({className: 'billing-information__checkbox', type: 'checkbox', value: 'save-credit-card-info', name: 'save-credit-card-info', isChecked: true, label: 'Save information of this credit card'}) }}
+					{{ customToggle({className: 'billing-information__checkbox', type: 'checkbox', value: 'agreement', name: 'agreement', isChecked: false, label: 'I accept the <a href="#"> terms and comditions </a> and the <a href="#"> Privacy Policies </a>'}) }}
+				</div>
+				<div class="billing-information__buttons">
+					{{ button({className: 'button_white', type: 'button', children: 'Back'}) }}
+					{{ button({children: 'Check Out', type: 'submit'}) }}
+				</div>
+			</div>
+		</form>
+	</div>
+{% endmacro %}

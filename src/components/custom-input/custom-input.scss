@@ -1,0 +1,41 @@
+.custom-input {
+	width: 100%;
+
+	label {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__label {
+		display: flex;
+		align-items: center;
+
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 24px;
+
+		color: $color-comet;
+	}
+
+	input {
+		width: 100%;
+		padding: 8px 10px;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+
+		border: none;
+		border-radius: 3px;
+		background-color: $color-lavender;
+		color: $color-default-black;
+
+		&::placeholder {
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 24px;
+
+			color: $color-manatee;
+		}
+	}
+}

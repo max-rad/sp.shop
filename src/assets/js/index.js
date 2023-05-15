@@ -18,9 +18,13 @@ class ProjectApp {
 		};
 		this.components = {};
 		this.helpers = {};
-		this.modules = {};
+		this.modules = {
+			initBasket: require('./modules/init-basket').default,
+		};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
+
+			this.modules.initBasket();
 		});
 	}
 }

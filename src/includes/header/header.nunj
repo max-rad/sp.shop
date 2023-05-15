@@ -1,7 +1,19 @@
+{% from "../../components/user-menu/user-menu.nunj" import userMenu %}
 {% from "../../components/menu/menu.nunj" import menu %}
 
-<div class="header">
+<header class="header">
 	<div class="container">
-		{{ menu() }}
+		<div class="header__wrapper">
+			<a href="#" class="header__logo">
+				{{ icon({
+					iconName: 'logo',
+					attributes: 'width="89" height="32" viewBox="0 0 89 32" fill="none" xmlns="http://www.w3.org/2000/svg"'
+				}) }}
+			</a>
+			<div class="header__navigation">
+				{{ userMenu() }}
+				{{ menu() }}
+			</div>
+		</div>
 	</div>
-</div>
+</header>

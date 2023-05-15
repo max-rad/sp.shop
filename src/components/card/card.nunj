@@ -1,0 +1,23 @@
+{% from "../../components/counter/counter.nunj" import counter %}
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% macro card(props) %}
+	<div class="card" data-card>
+		<div class="card__image-wrapper">
+			<img src="assets/images/{{ props.image.src }}" width="{{ props.image.width }}" height="{{ props.image.height }}" alt="{{ props.image.alt }}">
+		</div>
+		<div class="card__info">
+			<h3 class="card__title">{{ props.title }}</h3>
+			<div class="card__additional-info">
+				{{ counter() }}
+				<p class="card__price" data-card-price>$ {{ props.price }}</p>
+			</div>
+		</div>
+		<button class="card__delete" type="button" data-card-delete>
+			{{ icon({
+				iconName: 'cross',
+				attributes: 'width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"'
+			}) }}
+		</button>
+	</div>
+{% endmacro %}

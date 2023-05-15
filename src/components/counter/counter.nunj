@@ -1,0 +1,19 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% macro counter() %}
+	<div class="counter" data-counter>
+		<button class="counter__button" data-counter-remove>
+			{{ icon({
+				iconName: 'remove',
+				attributes: 'width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"'
+			}) }}
+		</button>
+		<span class="counter__number" data-counter-number>1</span>
+		<button class="counter__button" data-counter-add>
+			{{ icon({
+				iconName: 'add',
+				attributes: 'width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"'
+			}) }}
+		</button>
+	</div>
+{% endmacro %}

@@ -1,4 +1,33 @@
 .header {
-	padding: 20px 0;
-	background: #ccc;
+	padding: 26px 0 23px;
+	border-bottom: 1px solid #cfcfcf;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 89px;
+		height: 32px;
+		margin-right: 26px;
+
+		svg {
+			width: 89px;
+			height: 32px;
+		}
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		width: 100%;
+
+		@include max-screen(1023px) {
+			justify-content: flex-end;
+		}
+	}
 }

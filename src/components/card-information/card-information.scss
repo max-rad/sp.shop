@@ -1,0 +1,48 @@
+.card-information {
+	display: grid;
+	row-gap: 20px;
+
+	max-width: 550px;
+	margin-bottom: 40px;
+	padding: 19px 29px 45px;
+
+	border: 1px solid $color-very-light-grey;
+	border-radius: 5px;
+	box-shadow: 0 0 32px rgba($color-default-white, 0.19);
+	background-color: $color-default-white;
+
+	@include max-screen(767px) {
+		margin-bottom: 36px;
+		padding: 0;
+
+		border: none;
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	&__card-number {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		column-gap: 30px;
+		align-items: flex-end;
+
+		@include max-screen(767px) {
+			column-gap: 5px;
+		}
+	}
+
+	&__additional-info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 30px;
+		align-items: flex-end;
+
+		max-width: 230px;
+
+		@include max-screen(767px) {
+			column-gap: 5px;
+
+			max-width: 147px;
+		}
+	}
+}
