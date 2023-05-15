@@ -4,7 +4,7 @@
 {% macro card(props) %}
 	<div class="card" data-card>
 		<div class="card__image-wrapper">
-			<img src="assets/images/{{ props.image.src }}" width="{{ props.image.width }}" height="{{ props.image.height }}" alt="{{ props.image.alt }}">
+			<img src="assets/images/inline/{{ props.image.src }}" width="{{ props.image.width }}" height="{{ props.image.height }}" alt="{{ props.image.alt }}">
 		</div>
 		<div class="card__info">
 			<h3 class="card__title">{{ props.title }}</h3>
