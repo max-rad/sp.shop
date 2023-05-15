@@ -10,7 +10,7 @@ import * as CONFIG from '../config';
 
 export default function images() {
 	return gulp
-		.src([PATHS.src.images, `!${PATHS.src.imagesInline}/**.*`, `!${PATHS.src.sprites}`])
+		.src([PATHS.src.images, `!${PATHS.src.inline}/**.*`, `!${PATHS.src.sprites}`])
 		.pipe(
 			gulpif(
 				CONFIG.shouldCompressImages,
